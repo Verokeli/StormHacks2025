@@ -52,7 +52,7 @@ export default function Scene() {
         <main className={`scene ${isPast ? 'scene--past' : 'scene--present'}`}>
             <header className="scene__header">
                 <h1>WHEN THE SEA<br />REMEMBERED.</h1>
-                <Toggle isPast={isPast} setIsPast={setIsPast} />
+                {/* <Toggle isPast={isPast} setIsPast={setIsPast} /> */}
             </header>
 
             {/* hotspots (positioned absolutely using s.pos.x / s.pos.y) */}

@@ -4,7 +4,7 @@
     "name": "Pacific herring",
     "type": "Fish · Spawning",
     "pos": {
-      "x": 16,
+      "x": 75,
       "y": 52
     },
     "silhouette": "/assets/silhouettes/herring.svg",
@@ -17,8 +17,8 @@
     "name": "Smelt and small schooling fish",
     "type": "Fish · Schooling",
     "pos": {
-      "x": 23,
-      "y": 66
+      "x": 54,
+      "y": 48
     },
     "silhouette": "/assets/silhouettes/smelt_sample.svg",
     "figure": "/assets/placeholder/smelt.jpg",
@@ -30,8 +30,8 @@
     "name": "Flatfish / bottom fish",
     "type": "Fish · Benthic",
     "pos": {
-      "x": 42,
-      "y": 63
+      "x": 80,
+      "y": 65
     },
     "silhouette": "/assets/silhouettes/flatfish.svg",
     "figure": "/assets/placeholder/flatfish.jpg",
@@ -43,8 +43,8 @@
     "name": "Olympia oyster / clams / mussels",
     "type": "Shellfish · Bivalve",
     "pos": {
-      "x": 52,
-      "y": 67
+      "x": 10,
+      "y": 45
     },
     "silhouette": "/assets/silhouettes/oyster.svg",
     "figure": "/assets/placeholder/oyster.jpg",
@@ -56,8 +56,8 @@
     "name": "Eelgrass meadow",
     "type": "Habitat · Nursery",
     "pos": {
-      "x": 46,
-      "y": 66
+      "x": 30,
+      "y": 55
     },
     "silhouette": "/assets/silhouettes/eelgrass.svg",
     "figure": "/assets/placeholder/eelgrass.jpg",
@@ -69,8 +69,8 @@
     "name": "Worms / small benthic invertebrates",
     "type": "Invertebrate · Sediment Dweller",
     "pos": {
-      "x": 59,
-      "y": 72
+      "x": 48,
+      "y": 74
     },
     "silhouette": "/assets/silhouettes/worms.svg",
     "figure": "/assets/placeholder/worms.jpg",
@@ -83,7 +83,7 @@
     "type": "Avian · Intertidal Feeder",
     "pos": {
       "x": 33,
-      "y": 27
+      "y": 24
     },
     "silhouette": "/assets/silhouettes/birds.svg",
     "figure": "/assets/placeholder/birds.jpg",
@@ -95,8 +95,8 @@
     "name": "Harbour seal",
     "type": "Mammal · Marine",
     "pos": {
-      "x": 88,
-      "y": 50
+      "x": 93,
+      "y": 45
     },
     "silhouette": "/assets/silhouettes/seal.svg",
     "figure": "/assets/placeholder/seal.jpg",
@@ -108,8 +108,8 @@
     "name": "Spiny dogfish / salmon / sturgeon",
     "type": "Fish · Migratory",
     "pos": {
-      "x": 80,
-      "y": 70
+      "x": 90,
+      "y": 85
     },
     "silhouette": "/assets/silhouettes/sturgeon.svg",
     "figure": "/assets/placeholder/sturgeon.jpg",

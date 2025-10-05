@@ -1,6 +1,6 @@
 .scene {
     position: relative;
-    height: 150vh;
+    height: 130vh;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -80,4 +80,45 @@
     /* border-radius: 12px; */
     max-width: 400px;
     width: 90%;
+}
+
+/* open chat button */
+.openchat-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10000;
+
+  padding: 8px 14px;
+  border: 3px solid black;
+  border-radius: 9999px;
+
+  background: white;
+  color: black;
+  font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.openchat-btn:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.openchat-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.openchat-btn.is-active {
+  /* when in Chat mode, invert it slightly */
+  background: #f3f3f3;
+  border-color: black;
+  color: black;
 }

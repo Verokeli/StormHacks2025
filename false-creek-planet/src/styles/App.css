@@ -5,6 +5,27 @@
   text-align: center;
 }
 
+.openchat-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10000;
+
+  padding: 8px 14px;
+  border: 1.5px solid black;
+  border-radius: 9999px;
+
+  background: white;
+  color: black;
+  font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
