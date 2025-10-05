@@ -3,20 +3,117 @@
     "id": "herring",
     "name": "Pacific herring",
     "type": "Fish · Spawning",
-    "pos": { "x": 24, "y": 58 },
+    "pos": {
+      "x": 24,
+      "y": 58
+    },
     "silhouette": "/assets/silhouettes/herring.svg",
     "figure": "/assets/placeholder/herring.jpg",
     "story": "Herring once spawned in local eelgrass meadows. Habitat loss and pollution collapsed the spawning grounds.",
     "source": "Historical ecology notes; local restoration groups."
   },
   {
+    "id": "smelt",
+    "name": "Smelt and small schooling fish",
+    "type": "Fish · Schooling",
+    "pos": {
+      "x": 33,
+      "y": 61
+    },
+    "silhouette": "/assets/silhouettes/smelt.svg",
+    "figure": "/assets/placeholder/smelt.jpg",
+    "story": "Once recorded in early fisheries, these fish nearly vanished as water quality declined in False Creek.",
+    "source": "Early fisheries records; environmental surveys."
+  },
+  {
+    "id": "flatfish",
+    "name": "Flatfish / bottom fish",
+    "type": "Fish · Benthic",
+    "pos": {
+      "x": 42,
+      "y": 63
+    },
+    "silhouette": "/assets/silhouettes/flatfish.svg",
+    "figure": "/assets/placeholder/flatfish.jpg",
+    "story": "Common in benthic zones; polluted sediments and dredging destroyed much of their habitat.",
+    "source": "Sediment sampling archives; marine ecology reports."
+  },
+  {
+    "id": "oyster",
+    "name": "Olympia oyster / clams / mussels",
+    "type": "Shellfish · Bivalve",
+    "pos": {
+      "x": 52,
+      "y": 67
+    },
+    "silhouette": "/assets/silhouettes/oyster.svg",
+    "figure": "/assets/placeholder/oyster.jpg",
+    "story": "Native shellfish once lined the shores; overharvest, acidification, and toxic sediments led to their decline.",
+    "source": "Coastal ecology references; restoration efforts."
+  },
+  {
     "id": "eelgrass",
     "name": "Eelgrass meadow",
     "type": "Habitat · Nursery",
-    "pos": { "x": 46, "y": 66 },
+    "pos": {
+      "x": 46,
+      "y": 66
+    },
     "silhouette": "/assets/silhouettes/eelgrass.svg",
     "figure": "/assets/placeholder/eelgrass.jpg",
-    "story": "Shallow, sunlit meadows provided nursery habitat. Turbidity and fill erased much of it.",
+    "story": "Shallow, sunlit meadows provided nursery habitat. Turbidity and shoreline fill erased most of them.",
     "source": "Field surveys; shoreline history."
+  },
+  {
+    "id": "worms",
+    "name": "Worms / small benthic invertebrates",
+    "type": "Invertebrate · Sediment Dweller",
+    "pos": {
+      "x": 59,
+      "y": 72
+    },
+    "silhouette": "/assets/silhouettes/worms.svg",
+    "figure": "/assets/placeholder/worms.jpg",
+    "story": "Once found in sediment samples, they declined with increased toxins and low oxygen levels.",
+    "source": "Sediment core analyses; pollution studies."
+  },
+  {
+    "id": "birds",
+    "name": "Birds (herons, ducks, shorebirds)",
+    "type": "Avian · Intertidal Feeder",
+    "pos": {
+      "x": 66,
+      "y": 50
+    },
+    "silhouette": "/assets/silhouettes/birds.svg",
+    "figure": "/assets/placeholder/birds.jpg",
+    "story": "Previously fed along intertidal flats; wetlands and mudflats were filled, reducing feeding grounds.",
+    "source": "Historical bird counts; shoreline development maps."
+  },
+  {
+    "id": "seal",
+    "name": "Harbour seal",
+    "type": "Mammal · Marine",
+    "pos": {
+      "x": 72,
+      "y": 60
+    },
+    "silhouette": "/assets/silhouettes/seal.svg",
+    "figure": "/assets/placeholder/seal.jpg",
+    "story": "Still occasionally seen, though less frequent due to boat noise and habitat change.",
+    "source": "Marine mammal observation logs; local reports."
+  },
+  {
+    "id": "sturgeon",
+    "name": "Spiny dogfish / salmon / sturgeon",
+    "type": "Fish · Migratory",
+    "pos": {
+      "x": 80,
+      "y": 70
+    },
+    "silhouette": "/assets/silhouettes/sturgeon.svg",
+    "figure": "/assets/placeholder/sturgeon.jpg",
+    "story": "Historically present in Burrard Inlet; migration routes were blocked and water pollution increased.",
+    "source": "Regional fisheries data; Burrard Inlet ecology reports."
   }
 ]
