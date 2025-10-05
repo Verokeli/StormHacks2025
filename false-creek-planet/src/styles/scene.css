@@ -8,6 +8,24 @@
     transition: background-image 0.8s ease-in-out;
 }
 
+.scene__header {
+  position: absolute;       /* place it above the background */
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.scene__header h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 /* Background for the past */
 .scene--past {
     background-image: url('/images/background-past.jpg');
