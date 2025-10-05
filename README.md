@@ -3,7 +3,7 @@
 # False Creek Species Revival — Interactive Visualization with AI Dialogue
 
 **Project Overview**  
-False Creek Species Revival is an interactive web application that digitally “restores” marine and coastal species that were once abundant in Vancouver's False Creek / Burrard Inlet but have since declined or disappeared. Users can explore historical ecology, understand human impacts, and interact with AI-generated dialogues via **Gemini API**.
+When the Sea Remembered... is an interactive web application that digitally “restores” marine and coastal species that were once abundant in Vancouver's False Creek / Burrard Inlet but have since declined or disappeared due to human activities. Users can explore historical ecology, understand human impacts, and interact with AI-generated dialogues via **Gemini API**.
 
 ---
 
@@ -57,8 +57,8 @@ False Creek Species Revival is an interactive web application that digitally “
  
 ## 👩‍💻 Contributors
 
-- **Leen** – Design & Animation (Graphics, Canvas / Visual Effects), UI/UX prototyping, SVG asset creation, Interactive visual elements  
-- **Veronica** – Frontend Development (React, SVG Animations), UI/UX Design (Figma, layout, interactive visuals), Component implementation
+- **Leen** – Frontend Development (React, Interactive Animations)
+- **Veronica** – SVG asset creation, UI/UX Design (Figma, layout, interactive visuals)
 - **Hyelim** – Backend Development (Node.js, Express, API routing, server setup), Database integration, Server-side logic, API endpoints   
 - **Qian** – Gemini API troubleshooting and integration, AI dialogue system, Documentation, Testing and debugging  
 
