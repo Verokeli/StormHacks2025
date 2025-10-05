@@ -1,6 +1,6 @@
 .scene {
     position: relative;
-    height: 100vh;
+    height: 150vh;
     overflow: hidden;
     background: linear-gradient(#0a0f16, #16202f);
 }
