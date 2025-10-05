@@ -8,8 +8,8 @@ export default function Hotspot({ s, onOpen }) {
             onClick={() => onOpen?.(s)}
             aria-label={s.name}
             style={{
-                left: s.pos.x + "%",
-                top: s.pos.y + "%",
+                left: `${s.pos.x}%`,
+                top: `${s.pos.y}%`,
                 transform: "translate(-50%, -50%)",
                 position: "absolute",
                 background: "transparent",
@@ -18,19 +18,14 @@ export default function Hotspot({ s, onOpen }) {
                 padding: 0,
             }}
         >
-            { }
+            {/* silhouette image */}
             <img
                 src={s.silhouette}
                 alt={s.name}
                 className="glyph"
-                style={{
-                    width: "80px",
-                    height: "80px",
-                    display: "block",
-                }}
             />
 
-            { }
+            {/* label text */}
             <div className="label">{s.name}</div>
         </button>
     );
