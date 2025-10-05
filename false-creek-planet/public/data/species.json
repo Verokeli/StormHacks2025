@@ -1,0 +1,22 @@
+[
+  {
+    "id": "herring",
+    "name": "Pacific herring",
+    "type": "Fish · Spawning",
+    "pos": { "x": 24, "y": 58 },
+    "silhouette": "/assets/silhouettes/herring.svg",
+    "figure": "/assets/placeholder/herring.jpg",
+    "story": "Herring once spawned in local eelgrass meadows. Habitat loss and pollution collapsed the spawning grounds.",
+    "source": "Historical ecology notes; local restoration groups."
+  },
+  {
+    "id": "eelgrass",
+    "name": "Eelgrass meadow",
+    "type": "Habitat · Nursery",
+    "pos": { "x": 46, "y": 66 },
+    "silhouette": "/assets/silhouettes/eelgrass.svg",
+    "figure": "/assets/placeholder/eelgrass.jpg",
+    "story": "Shallow, sunlit meadows provided nursery habitat. Turbidity and fill erased much of it.",
+    "source": "Field surveys; shoreline history."
+  }
+]
