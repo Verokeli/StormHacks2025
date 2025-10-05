@@ -86,9 +86,8 @@ if (isProd) {
     app.use(express.static(clientDist));
 
     // SPA fallback: forward non-API routes to index.html
-    app.get("*", (req, res, next) => {
-        if (req.path.startsWith("/api")) return next(); // keep API 404 behavior below
-        res.sendFile(path.join(clientDist, "index.html"));
+    app.get(/.*/, (req, res) => {
+        res.sendFile(path.join(__dirname, '../dist/index.html'));
     });
 }
 
