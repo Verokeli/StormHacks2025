@@ -1,1 +1,67 @@
-/* Add style to match figma design when veronica is done -Leen */
+/* Background overlay */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45); /* semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+}
+
+/* Card styling */
+.card {
+    background: linear-gradient(135deg, #f9f7f3, #ece7de); /* soft, natural tone */
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    width: 420px;
+    max-width: 90%;
+    padding: 1.8rem;
+    text-align: center;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #2e2b25;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* Card title */
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #2a2926;
+}
+
+/* Optional figure (if you add back the image) */
+.figure {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 2px solid #d0c5ae;
+}
+
+/* Story text */
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #3d3a33;
+}
+
+/* Source text */
+.card small {
+    display: block;
+    font-size: 0.9rem;
+    color: #5b574d;
+    margin-top: 0.5rem;
+    opacity: 0.85;
+}
+

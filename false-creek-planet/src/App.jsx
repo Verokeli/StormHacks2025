@@ -24,18 +24,9 @@ export default function App() {
           onClick={() => setShowChat((v) => !v)}
           aria-pressed={showChat}
           aria-label={showChat ? "Close chat" : "Open chat"}
-          style={{
-            border: 0,
-            borderRadius: 12,
-            padding: "8px 12px",
-            fontWeight: 700,
-            cursor: "pointer",
-            background: "#3a56d4",
-            color: "#fff",
-            boxShadow: "0 6px 14px rgba(0,0,0,.25)"
-          }}
-        >
-          {showChat ? "← Back to Scene" : "💬 Open Chat"}
+          className={`openchat-btn ${showChat ? "is-active" : ""}`}
+      >
+          {showChat ? "← Back to Scene" : "Open Chat"}
         </button>
       </div>
 

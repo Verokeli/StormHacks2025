@@ -10,9 +10,6 @@ export default function InfoCard({ data, onClose }) {
                 {/* <img src={data.figure} alt={data.name} className="figure" /> */}
                 <p>{data.story}</p>
                 <small>Source: {data.source}</small>
-
-                <ChatBox />
-                <button type="button" onClick={onClose}>Close</button>
             </div>
         </div>
     );
