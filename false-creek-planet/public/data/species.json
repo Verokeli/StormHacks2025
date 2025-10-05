@@ -4,8 +4,8 @@
     "name": "Pacific herring",
     "type": "Fish · Spawning",
     "pos": {
-      "x": 24,
-      "y": 58
+      "x": 16,
+      "y": 52
     },
     "silhouette": "/assets/silhouettes/herring.svg",
     "figure": "/assets/placeholder/herring.jpg",
@@ -17,8 +17,8 @@
     "name": "Smelt and small schooling fish",
     "type": "Fish · Schooling",
     "pos": {
-      "x": 33,
-      "y": 61
+      "x": 23,
+      "y": 66
     },
     "silhouette": "/assets/silhouettes/smelt_sample.svg",
     "figure": "/assets/placeholder/smelt.jpg",
@@ -82,8 +82,8 @@
     "name": "Birds (herons, ducks, shorebirds)",
     "type": "Avian · Intertidal Feeder",
     "pos": {
-      "x": 66,
-      "y": 50
+      "x": 33,
+      "y": 27
     },
     "silhouette": "/assets/silhouettes/birds.svg",
     "figure": "/assets/placeholder/birds.jpg",
@@ -95,8 +95,8 @@
     "name": "Harbour seal",
     "type": "Mammal · Marine",
     "pos": {
-      "x": 72,
-      "y": 60
+      "x": 88,
+      "y": 50
     },
     "silhouette": "/assets/silhouettes/seal.svg",
     "figure": "/assets/placeholder/seal.jpg",
