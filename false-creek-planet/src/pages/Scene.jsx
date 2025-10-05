@@ -51,7 +51,7 @@ export default function Scene() {
     return (
         <main className={`scene ${isPast ? 'scene--past' : 'scene--present'}`}>
             <header className="scene__header">
-                <h1>WHEN THE SEA<br />REMEMBERED.</h1>
+                <h1>WHEN THE SEA<br />REMEMBERED...</h1>
                 {/* <Toggle isPast={isPast} setIsPast={setIsPast} /> */}
             </header>
 
@@ -62,6 +62,10 @@ export default function Scene() {
 
             {/* Info card modal */}
             {selected && <InfoCard data={selected} onClose={() => setSelected(null)} />}
+
+            <footer className="scene__footer">
+                <p>2025 StormHacks: An Interactive Reflection on False Creek’s Lost Shoreline</p>
+            </footer>
         </main>
     );
 }

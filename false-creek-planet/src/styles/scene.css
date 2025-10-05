@@ -10,7 +10,6 @@
 
 .scene__header {
     position: absolute;
-    /* place it above the background */
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -24,7 +23,7 @@
     margin: 0;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.02em;
 }
 
 /* Background for the past */
@@ -122,4 +121,23 @@
     background: #f3f3f3;
     border-color: black;
     color: black;
+}
+
+.scene__footer {
+  position: fixed;
+  font-weight: bold;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  color: black;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  z-index: 50;
+  backdrop-filter: blur(4px);
+}
+
+.scene__footer p {
+  margin: 0;
 }
