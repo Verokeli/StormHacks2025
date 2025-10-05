@@ -7,7 +7,7 @@ When the Sea Remembered... is an interactive web application that digitally “r
 
 ---
 
-## 🌿 Project Goals
+## Project Goals
 - Visualize historical vs. current ecological conditions of False Creek  
 - Provide educational content about marine and coastal biodiversity  
 - Use interactive animations to simulate species disappearance, habitat degradation, and potential restoration  
@@ -15,7 +15,7 @@ When the Sea Remembered... is an interactive web application that digitally “r
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 - **Frontend:** React.js, HTML, CSS, SVG/Canvas for interactive animations  
 - **Backend / Server:** Node.js, Express  
 - **AI Integration:** Gemini API for natural language responses  
@@ -24,7 +24,7 @@ When the Sea Remembered... is an interactive web application that digitally “r
 - **Deployment:** Render
 
  
-## 👩‍💻 Contributors
+## Contributors
 
 - **Leen** – Fullstack Development (React, Vite, Interactive Animations, Node.js, Express, server setup), Debugging and Testing
 - **Veronica** – SVG asset creation, UI/UX Design (Figma, layout, interactive visuals)
@@ -32,7 +32,7 @@ When the Sea Remembered... is an interactive web application that digitally “r
 - **Qian** – Gemini API troubleshooting and integration, AI dialogue system, Documentation, Testing and debugging  
 
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 1. Clone the repository:
    ```bash
