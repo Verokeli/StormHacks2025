@@ -1,12 +1,15 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState, useEffect } from "react";
 
 export function useChat(initialMessage = "Hello! How can I help you today?") {
     const [messages, setMessages] = useState(
         initialMessage ? [{ role: "assistant", text: initialMessage }] : []
     );
     const [pending, setPending] = useState(false);
+    const abortRef = useRef(null);
 
-    // Convert UI messages to the backend "history" shape
+    const MAX_TURNS = 10; // keep last N user/assistant pairs
+
+    // Build backend "history" array from UI messages
     const toHistory = useCallback(() => {
         const result = [];
         let cur = {};
@@ -26,36 +29,83 @@ export function useChat(initialMessage = "Hello! How can I help you today?") {
             }
         }
         if (Object.keys(cur).length) result.push(cur);
-        return result;
+
+        // keep last N exchanges to reduce tokens
+        return result.slice(-MAX_TURNS);
     }, [messages]);
 
-    // Send a user message and get the model reply
-    const send = useCallback(async (text) => {
-        const content = text.trim();
-        if (!content || pending) return;
+    const send = useCallback(
+        async (text) => {
+            const content = (text ?? "").trim();
+            if (!content || pending) return;
 
-        // Optimistic UI update
-        setMessages((prev) => [...prev, { role: "user", text: content }]);
-        setPending(true);
+            // take a snapshot of history BEFORE optimistic UI update
+            const historySnapshot = toHistory();
 
-        try {
-            const res = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ history: toHistory(), message: content })
-            });
-            const data = await res.json();
-            const reply = data?.reply ?? "⚠️ Invalid response from server.";
-            setMessages((prev) => [...prev, { role: "assistant", text: reply }]);
-        } catch (e) {
-            setMessages((prev) => [
-                ...prev,
-                { role: "assistant", text: "⚠️ Network or server error." }
-            ]);
-        } finally {
-            setPending(false);
-        }
-    }, [pending, toHistory]);
+            // optimistic UI
+            setMessages((prev) => [...prev, { role: "user", text: content }]);
+            setPending(true);
 
-    return useMemo(() => ({ messages, pending, send, setMessages }), [messages, pending, send]);
+            // cancel any in-flight request
+            if (abortRef.current) abortRef.current.abort();
+            const controller = new AbortController();
+            abortRef.current = controller;
+
+            try {
+                const res = await fetch("/api/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ history: historySnapshot, message: content }),
+                    signal: controller.signal,
+                });
+
+                // handle non-2xx and non-JSON responses robustly
+                const textBody = await res.text();
+                if (!res.ok) {
+                    throw new Error(textBody || `HTTP ${res.status}`);
+                }
+
+                let data;
+                try {
+                    data = textBody ? JSON.parse(textBody) : {};
+                } catch {
+                    throw new Error("Invalid JSON response");
+                }
+
+                const reply = data?.reply ?? "⚠️ Invalid response from server.";
+                setMessages((prev) => [...prev, { role: "assistant", text: reply }]);
+            } catch (e) {
+                if (e.name === "AbortError") return; // request was cancelled
+                setMessages((prev) => [
+                    ...prev,
+                    { role: "assistant", text: `⚠️ ${e.message || "Network error."}` },
+                ]);
+            } finally {
+                setPending(false);
+                if (abortRef.current === controller) abortRef.current = null;
+            }
+        },
+        [pending, toHistory]
+    );
+
+    const cancel = useCallback(() => {
+        if (abortRef.current) abortRef.current.abort();
+    }, []);
+
+    const reset = useCallback(() => {
+        cancel();
+        setMessages(initialMessage ? [{ role: "assistant", text: initialMessage }] : []);
+        setPending(false);
+    }, [cancel, initialMessage]);
+
+    useEffect(() => {
+        return () => {
+            if (abortRef.current) abortRef.current.abort();
+        };
+    }, []);
+
+    return useMemo(
+        () => ({ messages, pending, send, setMessages, cancel, reset }),
+        [messages, pending, send, cancel, reset]
+    );
 }
