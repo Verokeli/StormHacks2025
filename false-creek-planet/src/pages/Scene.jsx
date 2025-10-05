@@ -55,15 +55,6 @@ export default function Scene() {
                 <Toggle isPast={isPast} setIsPast={setIsPast} />
             </header>
 
-            {/* background layer: swap image by isPast */}
-            <div className="scene__background">
-                <img
-                    src={isPast ? '/images/background-past.jpg' : '/images/background-present.jpg'}
-                    alt={isPast ? 'False Creek (past)' : 'False Creek (present)'}
-                    className="scene__bgimage"
-                />
-            </div>
-
             {/* hotspots (positioned absolutely using s.pos.x / s.pos.y) */}
             {species.map((s, idx) => (
                 <Hotspot key={s.name ?? idx} s={s} onOpen={() => setSelected(s)} />
