@@ -32,10 +32,7 @@ When the Sea Remembered... is an interactive web application that digitally “r
 - **Qian** – Gemini API troubleshooting and integration, AI dialogue system, Documentation, Testing and debugging  
 
 
-## Installation & Setup
+## Usage
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/false-creek-planet.git
-   cd false-creek-planet
+1. Visit the deployed app: `https://when-the-sea-remembered.onrender.com/`.
 
