@@ -29,7 +29,7 @@ When the Sea Remembered... is an interactive web application that digitally “r
 
 - **Leen** – Frontend Development (React, Interactive Animations)
 - **Veronica** – SVG asset creation, UI/UX Design (Figma, layout, interactive visuals)
-- **Hyelim** – Backend Development (Node.js, Express, API routing, server setup), Database integration, Server-side logic, API endpoints   
+- **Hyelim** – Backend Development (Node.js, Express, API routing, server setup), Gemini API, Server-side logic, API endpoints   
 - **Qian** – Gemini API troubleshooting and integration, AI dialogue system, Documentation, Testing and debugging  
 
 
